@@ -1,0 +1,113 @@
+:root {
+	--color-ripple: rgba(255,255,255,0.8);
+	--off-white: #c4c9d1;
+}
+
+body {
+	background: #282828;
+	font-family: roboto, helvetica;
+}
+
+h1, h3 {
+	color: var(--off-white);
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 15%;
+}
+
+p {
+	color: var(--off-white);
+	text-align: center;
+}
+
+table {
+		background: linear-gradient(135deg, #3500d3 0%, #0c0032 100%);
+}
+table, th, td {
+	color: var(--off-white);
+	text-align: center;
+	margin: 5% auto;
+	border: 1px solid #fff;
+
+	width: 50%;
+}
+
+td:hover {
+	background-color: #190061;
+}
+
+a {
+	color: #42c5f4;
+	text-transform: uppercase;
+}
+
+
+.container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 50%;
+	width: 50%;
+	margin: 0% auto;
+	text-align: center;
+}
+*[data-animation="ripple"] {
+	position: relative; /*Position relative is required*/
+	width: 7%;
+	display: inline;
+
+	border-radius: 10%;
+	padding: 1%;
+	color: var(--off-white);
+	background: linear-gradient(135deg, #3500d3 0%, #0c0032 100%);
+
+
+	font-weight: 700;
+	font-size: 95%;
+	box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+	-webkit-tap-highlight-color: transparent;
+	margin-left: 1%;
+}
+
+*[data-animation="ripple"]::selection {
+	background: transparent;
+	pointer-events: none;
+}
+
+.refresh {
+	display: block;
+	margin: 5% auto;
+	padding: 1%;
+	width: 12%;
+}
+
+.mode {
+display: inline-block;
+padding: 4px 14px;
+margin: 1% auto;
+font-size: 100%;
+color: var(--off-white);
+text-align: center;
+text-shadow: 0 1px 0px rgba(255, 255, 255, .125);
+vertical-align: middle;
+cursor: pointer;
+background-color: #0c0032;
+border: 1px solid #e7e7e7;
+}
+
+.active {
+	background-color: #3500d3;
+}
+
+@media(max-width: 1224px) {
+
+*[data-animation="ripple"] {
+	width: 20%;
+	display: block;
+	margin: 3% auto;
+	text-align: center;
+	}
+
+}
